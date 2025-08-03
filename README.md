@@ -1,12 +1,73 @@
-# React + Vite
+# 📅 Smart Daily Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based personal planner that combines a **calendar**, **event manager**, and **real-time weather updates** into one beautifully designed dashboard. Plan your days, manage your events, and stay updated with the weather — all in one place!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖼️ Demo
 
-## Expanding the ESLint configuration
+> 📌 **Live Preview**: _Coming Soon_
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Screenshots
+
+Coming soon...
+
+---
+
+## 🚀 Features
+
+### 🗓️ Calendar
+- Monthly calendar view
+- Highlights current day
+- Click any date to add or view events
+
+### 📌 Event Planner
+- Add, edit, and delete events
+- Supports multiple events per day
+- Events saved in localStorage
+
+### 🌤️ Weather Integration
+- Shows current and 5-day forecast
+- Auto location via browser or manual city input
+- Data from OpenWeatherMap API
+
+### 🎨 UI & UX
+- Clean responsive layout
+- Theme-ready (light/dark mode optional)
+- Built with Tailwind CSS / Bootstrap
+
+---
+
+## 🛠️ Tech Stack
+
+| Feature         | Technology Used               |
+|-----------------|-------------------------------|
+| Framework       | React.js                      |
+| Styling         | Tailwind CSS or Bootstrap     |
+| Calendar        | `react-calendar`              |
+| State Handling  | React Hooks, useContext       |
+| API Integration | Axios + OpenWeatherMap API    |
+| Storage         | localStorage (for now)        |
+| Icons           | ReactIcons                    |
+
+---
+
+## ⚙️ Setup & Installation
+
+Make sure you have **Node.js** and **npm** installed.
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/smart-daily-planner.git
+
+# 2. Navigate into the project directory
+cd smart-daily-planner
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
+```
