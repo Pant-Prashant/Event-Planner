@@ -1,10 +1,11 @@
 import "./App.css";
-import { AiFillAccountBook } from "react-icons/ai";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div>
-      <AiFillAccountBook /> PlaceHolder
+      <Header></Header>
+      <div className="my-container"></div>
     </div>
   );
 }
