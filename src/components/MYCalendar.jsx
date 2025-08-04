@@ -1,6 +1,6 @@
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import styles from "./Calendar.module.css";
+import styles from "./MyCalendar.module.css";
 import { useState } from "react";
 
 function MyCalendar() {

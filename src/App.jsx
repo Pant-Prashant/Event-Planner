@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import MyCalendar from "./components/calendar";
+import MyCalendar from "./components/MYCalendar";
 import Weather from "./components/Weather";
 import "./App.css";
 
