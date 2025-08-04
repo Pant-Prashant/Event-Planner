@@ -1,11 +1,16 @@
-import "./App.css";
 import Header from "./components/Header";
+import MyCalendar from "./components/calendar";
+import Weather from "./components/Weather";
+import "./App.css";
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <div className="my-container"></div>
+      <div className="my-container">
+        <MyCalendar></MyCalendar>
+        <Weather></Weather>
+      </div>
     </div>
   );
 }

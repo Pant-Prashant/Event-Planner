@@ -8,11 +8,48 @@ body {
 }
 
 .my-container {
+  padding: 10px;
   position: absolute;
-  height: 500px;
   width: 90%;
   left: 5%;
   top: 15%;
   background-color: #ffffff07;
   border-radius: 15px;
+}
+
+.react-calendar__tile--now {
+  background: #a9b2f5;
+  color: #000000;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__navigation button:enabled:hover {
+  background-color: #ffffff07;
+  color: white;
+}
+
+.react-calendar__tile--active {
+  background: rgba(0, 0, 0, 0.221);
+  color: white;
+}
+
+.react-calendar__tile--active:enabled:focus {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.react-calendar__navigation button {
+  height: 100%;
+}
+
+.react-calendar__tile {
+  padding: 0px;
+}
+
+.react-calendar__navigation button:enabled:focus {
+  background-color: rgba(255, 0, 0, 0);
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: #f0f0f000;
 }

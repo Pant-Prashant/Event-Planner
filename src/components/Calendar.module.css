@@ -1,0 +1,18 @@
+.myCalendar {
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  padding-top: 10px;
+  border-radius: 4px;
+  width: 550px;
+  background-color: #ffffff07;
+}
+button {
+  font-size: x-large;
+  height: 75px;
+  border-radius: 10px;
+  color: white;
+}
+
+button:hover {
+  background-color: rgba(4, 4, 4, 0.526);
+}
