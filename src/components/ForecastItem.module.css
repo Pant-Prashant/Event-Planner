@@ -1,0 +1,9 @@
+.forecast-image {
+  background-color: #00ffff8e;
+  height: 50px;
+  border-radius: 50%;
+}
+.text {
+  margin: 0;
+  font-size: 12px;
+}

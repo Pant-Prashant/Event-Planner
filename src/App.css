@@ -2,19 +2,21 @@
 body {
   margin: 0;
   min-height: 100vh;
+  height: 100%;
   background: linear-gradient(to bottom right, #000000, #41445c);
   color: #fff;
   font-family: "Inter", sans-serif;
 }
 
 .my-container {
+  margin-left: 5%;
+  margin-top: 20px;
   padding: 10px;
-  position: absolute;
   width: 90%;
-  left: 5%;
-  top: 15%;
   background-color: #ffffff07;
   border-radius: 15px;
+  display: flex;
+  gap: 20px;
 }
 
 .react-calendar__tile--now {
@@ -52,4 +54,18 @@ body {
 
 .react-calendar__navigation button:disabled {
   background-color: #f0f0f000;
+}
+
+@media (max-width: 1000px) {
+  .my-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .my-container {
+    align-items: stretch;
+  }
 }
