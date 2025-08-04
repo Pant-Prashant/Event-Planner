@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 
 const Weather = () => {
@@ -10,11 +9,18 @@ const Weather = () => {
       navigator.geolocation.getCurrentPosition(
         async (position) => {
           const { latitude, longitude } = position.coords;
+
           try {
-            const res = await axios.get(
+            const response = await fetch(
               `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
             );
-            setWeatherData(res.data);
+
+            if (!response.ok) {
+              throw new Error("Failed to fetch weather data");
+            }
+
+            const data = await response.json();
+            setWeatherData(data);
           } catch (error) {
             console.error("Weather API error:", error);
           }
