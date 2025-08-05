@@ -84,6 +84,7 @@ const Weather = () => {
             <div className={styles["forcast-item-list"]}>
               {dailyForcast.map((item) => (
                 <ForecastItem
+                  key={item.dt_txt}
                   date={formatDate(item.dt_txt)}
                   condition={capitalizeWords(item.weather[0].description)}
                   icon={item.weather[0].icon}
@@ -93,7 +94,14 @@ const Weather = () => {
           </div>
         </>
       ) : (
-        <p className={styles["loading-text"]}>Loading weather...</p>
+        <div>
+          <p className={styles["loading-text"]}>Loading Weather...</p>
+          <p className={styles.note}>-Allow browser to access location.</p>
+          <p className={styles.note}>
+            -Make sure that device location is on. If not turn it on and reload
+            the page.
+          </p>
+        </div>
       )}
     </div>
   );

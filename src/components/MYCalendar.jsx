@@ -6,8 +6,20 @@ import { useState } from "react";
 function MyCalendar() {
   const [date, setDate] = useState(new Date());
 
-  const onChange = (date) => {
-    setDate(date);
+  const onChange = (selectedDate) => {
+    const newDate = new Date(selectedDate);
+    const unixTimestamp = Math.floor(newDate.getTime() / 1000);
+    console.log(unixTimestamp);
+    setDate(unixTimestamp);
+
+    const textDate = new Date(selectedDate);
+
+    const formattedDate = textDate.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+    });
+
+    console.log(formattedDate);
   };
   return (
     <div>

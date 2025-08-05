@@ -65,3 +65,12 @@ p {
     width: 100%;
   }
 }
+
+.loading-text {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.note {
+  font-size: 12px;
+}

@@ -1,0 +1,28 @@
+.container-div {
+  border: solid #a0a096 1px;
+  border-radius: 4px;
+  background-color: #ffffff07;
+  width: 50%;
+  min-height: 150px;
+  margin-top: 10px;
+}
+
+.heading {
+  margin: 5px;
+  border-bottom: solid #ffffffc6 1px;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.no-events {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  color: #979797;
+}
+
+@media (max-width: 650px) {
+  .container-div {
+    width: 100%;
+  }
+}
