@@ -8,6 +8,7 @@
   margin-top: 10px;
   overflow: auto;
   scrollbar-width: none;
+  padding-bottom: 4px;
 }
 
 .heading {
@@ -66,18 +67,75 @@
   justify-content: left;
   background-color: #ffffffab;
   color: black;
+  border-radius: 10px;
+  margin-top: 15px;
 }
 
 .form-container:hover {
   background-color: #ffffffab;
+  box-shadow: white 0px 0px 10px;
 }
+
 .form-div {
   width: 100%;
   display: flex;
   align-items: start;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
+
+.span-style {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+
+.input-style {
+  height: 40px;
+  flex: 1;
+  min-width: 0;
+  border-radius: 5px;
+  border: none;
+  word-wrap: break-word;
+  font-size: 12px;
+}
+
+.button-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20%;
+}
+
+.button-submit {
+  padding: 0;
+  height: 25px;
+  background: none;
+  border: none;
+  transition: all 0.25s;
+}
+
+.button-submit:hover {
+  color: #00a700;
+  text-decoration: underline;
+  text-shadow: 0px 0px 2px;
+}
+
+.button-close {
+  padding: 0;
+  height: 25px;
+  background: none;
+  border: none;
+  transition: all 0.25s;
+}
+
+.button-close:hover {
+  color: #ff0000;
+  text-decoration: underline;
+  text-shadow: 0px 0px 2px;
+}
+
 @media (max-width: 650px) {
   .container-div {
     width: 100%;

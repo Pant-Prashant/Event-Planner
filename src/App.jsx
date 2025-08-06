@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import MyCalendar from "./components/MYCalendar";
 import Weather from "./components/Weather";
 import ShowEvents from "./components/ShowEvents";
-import UpcommingEvents from "./components/UpcomingEvents";
+import UpcomingEvents from "./components/UpcomingEvents";
 import "./App.css";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Weather></Weather>
           <div className="event-div">
             <ShowEvents />
-            <UpcommingEvents />
+            <UpcomingEvents />
           </div>
         </div>
       </div>

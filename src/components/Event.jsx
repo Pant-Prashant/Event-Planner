@@ -1,8 +1,8 @@
 import styles from "./Event.module.css";
 
-const Event = ({ name, discription }) => {
+const Event = ({ name, description }) => {
   let EventName = name;
-  let EventDiscription = discription;
+  let Eventdescription = description;
   return (
     <div
       style={{
@@ -16,11 +16,9 @@ const Event = ({ name, discription }) => {
       }}
     >
       <p className={styles.name}>{EventName}</p>
-      {discription != "" && (
-        <p className={styles.discription}>Discription: {EventDiscription}</p>
+      {description != "" && (
+        <p className={styles.description}>Description: {Eventdescription}</p>
       )}
-
-      
     </div>
   );
 };

@@ -2,24 +2,29 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import styles from "./MyCalendar.module.css";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setSelectedDate } from "../Redux/features/selectedDate";
 
 function MyCalendar() {
   const [date, setDate] = useState(new Date());
+  const dispatch = useDispatch();
 
   const onChange = (selectedDate) => {
     const newDate = new Date(selectedDate);
+
     const unixTimestamp = Math.floor(newDate.getTime() / 1000);
-    console.log(unixTimestamp);
-    setDate(unixTimestamp);
-
-    const textDate = new Date(selectedDate);
-
-    const formattedDate = textDate.toLocaleDateString("en-GB", {
+    const formattedDate = newDate.toLocaleDateString("en-GB", {
       day: "2-digit",
       month: "short",
     });
+    const dateValues = {
+      unixTime: unixTimestamp,
+      shortDate: formattedDate,
+    };
 
-    console.log(formattedDate);
+    dispatch(setSelectedDate(dateValues));
+
+    setDate(newDate);
   };
   return (
     <div>

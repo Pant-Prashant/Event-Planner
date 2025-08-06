@@ -60,9 +60,12 @@ body {
 .event-div {
   width: 95%;
   margin-left: 2.5%;
-
   display: flex;
   gap: 30px;
+}
+
+.react-calendar__navigation__label__labelText {
+  line-height: 1.2;
 }
 
 @media (max-width: 1100px) {

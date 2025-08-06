@@ -1,43 +1,24 @@
 import styles from "./UpcomingEvents.module.css";
 import DisplayUpcomingEvents from "./DisplayUpcomingEvent";
+import { useSelector } from "react-redux";
 
 const UpcomingEvents = () => {
-  const data = [
-    {
-      date: "07 Aug",
-      name: "Friend's Birthday",
-      priority: "High",
-    },
-    {
-      date: "07 Aug",
-      name: "Friend's Birthday",
-      priority: "Low",
-    },
-    {
-      date: "07 Aug",
-      name: "Friend's Birthday",
-      priority: "Medium",
-    },
-    {
-      date: "07 Aug",
-      name: "Friend's Birthday",
-      priority: "High",
-    },
-    {
-      date: "07 Aug",
-      name: "Friend's Birthday",
-      priority: "Low",
-    },
-  ];
+  const presentDateUnix = Math.floor(new Date().setHours(0, 0, 0, 0) / 1000);
+  const data = useSelector((state) => state.eventsData.value);
+
+  const filteredData = data
+    .filter((item) => item.dateUnix > presentDateUnix)
+    .sort((a, b) => a.dateUnix - b.dateUnix)
+    .slice(0, 5);
 
   return (
     <div className={styles["container-div"]}>
       <p className={styles.heading}>Upcomming Events:</p>
       <div>
-        {data.length === 0 ? (
+        {filteredData.length === 0 ? (
           <p className={styles["no-events"]}>No upcomming events available!</p>
         ) : (
-          data.map((items) => (
+          filteredData.map((items) => (
             <DisplayUpcomingEvents
               date={items.date}
               name={items.name}
