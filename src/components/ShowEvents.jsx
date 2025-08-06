@@ -2,7 +2,7 @@ import styles from "./ShowEvents.module.css";
 import Event from "./Event";
 
 const ShowEvents = () => {
-  const timePeriod = "Presen";
+  const timePeriod = "Present";
   const headingToday = "Today's Events:";
   const headingOther = "Planned Events for 07 Aug:";
   const date = "07 Aug";
@@ -40,7 +40,38 @@ const ShowEvents = () => {
           ))
         )}
       </div>
-      <button className={styles["add-event-button"]}>+ Add Event</button>
+      {timePeriod === "Past" ? (
+        <button className={styles["add-event-button-disabled"]} disabled>
+          + Add Event
+        </button>
+      ) : (
+        <button className={styles["add-event-button"]}>+ Add Event</button>
+      )}
+      <button className={styles["form-container"]} disabled>
+        <form action="" style={{ width: "100%" }}>
+          <div className={styles["form-div"]}>
+            <span style={{ width: "100%", display: "flex" }}>
+              Event Name:{" "}
+              <input
+                type="text"
+                placeholder="Enter the event name here!"
+                style={{ height: "30px", flex: "1", minWidth: "0" }}
+              />
+            </span>
+            <span style={{ width: "100%", textAlign: "left" }}>
+              Discription: <input style={{ width: "50px" }} type="text" />
+            </span>
+            <span style={{ width: "100%", textAlign: "left" }}>
+              Priority:{" "}
+              <select name="Priotity" id="">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </span>
+          </div>
+        </form>
+      </button>{" "}
     </div>
   );
 };
