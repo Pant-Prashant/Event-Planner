@@ -1,0 +1,24 @@
+.main-div {
+  display: flex;
+  width: 100%;
+  min-height: 60px;
+  height: fit-content;
+  border-top: solid white 1px;
+  padding: 0 2%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.clear-data-button {
+  font-size: 14px;
+  margin-left: 10px;
+  background: none;
+  border: none;
+  height: fit-content;
+}
+
+.clear-data-button:hover {
+  text-decoration: underline;
+}

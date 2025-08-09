@@ -50,17 +50,20 @@ const ShowEvents = () => {
     (item) => item.dateUnix === selectedDateUnix
   );
   const onFormSubmit = () => {
-    let newdata = {
-      date: selectedDateShort,
-      dateUnix: selectedDateUnix,
-      name: eventName.value,
-      description: description.value,
-      priority: priority.value,
-    };
+    if (eventName.value != "") {
+      let newdata = {
+        id: Date.now(),
+        date: selectedDateShort,
+        dateUnix: selectedDateUnix,
+        name: eventName.value,
+        description: description.value,
+        priority: priority.value,
+      };
 
-    dispatch(setEventsData(newdata));
+      dispatch(setEventsData(newdata));
 
-    changeVisibility();
+      changeVisibility();
+    }
   };
 
   return (
@@ -73,7 +76,12 @@ const ShowEvents = () => {
           <p className={styles["no-events"]}>{message}</p>
         ) : (
           filteredData.map((item) => (
-            <Event name={item.name} description={item.description} />
+            <Event
+              name={item.name}
+              description={item.description}
+              id={item.id}
+              key={item.id}
+            />
           ))
         )}
       </div>
@@ -105,7 +113,7 @@ const ShowEvents = () => {
                 />
               </span>
               <span className={styles["span-style"]}>
-                description:{" "}
+                Description:{" "}
                 <textarea
                   className={styles["input-style"]}
                   name="description:"

@@ -3,11 +3,19 @@ import {
   FaExclamationTriangle,
   FaCheckCircle,
 } from "react-icons/fa";
+import { AiTwotoneDelete } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { deleteEvent } from "../Redux/features/eventsData";
 
-const DisplayUpcomingEvent = ({ date, name, priority }) => {
+const DisplayUpcomingEvent = ({ date, name, priority, id }) => {
+  const dispatch = useDispatch();
   const newDate = date;
   const newName = name;
   const newPriority = priority;
+
+  const handleDelete = () => {
+    dispatch(deleteEvent(id));
+  };
 
   return (
     <div
@@ -60,15 +68,28 @@ const DisplayUpcomingEvent = ({ date, name, priority }) => {
             color: "#000000b6",
           }}
         >
-          Priority: {newPriority}
+          Priority: {newPriority}{" "}
+          {newPriority === "High" && <FaExclamationCircle color="#4e0000ff" />}{" "}
+          {newPriority === "Medium" && (
+            <FaExclamationTriangle color="#01524dff" />
+          )}{" "}
+          {newPriority === "Low" && <FaCheckCircle color="#105700ff" />}
         </p>
       </div>
-      <div style={{ fontSize: "33px", marginRight: "4%" }}>
-        {newPriority === "High" && <FaExclamationCircle color="#4e0000ff" />}{" "}
-        {newPriority === "Medium" && (
-          <FaExclamationTriangle color="#01524dff" />
-        )}{" "}
-        {newPriority === "Low" && <FaCheckCircle color="#105700ff" />}
+      <div style={{ fontSize: "33px", marginRight: "4%", display: "flex" }}>
+        <button
+          style={{
+            height: "fit-content",
+            margin: "0",
+            padding: "0",
+            background: "none",
+            border: "none",
+            color: "black",
+          }}
+          onClick={handleDelete}
+        >
+          <AiTwotoneDelete />
+        </button>
       </div>
     </div>
   );

@@ -8,11 +8,17 @@
 }
 button {
   font-size: x-large;
-  height: 75px;
+  height: 85px;
   border-radius: 10px;
   color: white;
 }
 
 button:hover {
   background-color: rgba(4, 4, 4, 0.526);
+}
+
+@media (max-width: 1100px) {
+  button {
+    height: 75px;
+  }
 }

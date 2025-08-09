@@ -1,4 +1,3 @@
-import { DiVim } from "react-icons/di";
 import styles from "./Header.module.css";
 
 const Header = () => {

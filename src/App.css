@@ -74,6 +74,9 @@ body {
     gap: 20px;
     align-items: center;
   }
+  .event-div {
+    gap: 5px;
+  }
 }
 
 @media (max-width: 650px) {

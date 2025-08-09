@@ -43,10 +43,20 @@ const Weather = () => {
             const data = await response.json();
             const forecastFetchData = await forecastFetch.json();
 
-            const dailyForcastList = forecastFetchData.list
-              .filter((item) => item.dt_txt.includes("12:00:00"))
-              .slice(1);
-            setDailyForcast(dailyForcastList);
+            const dailyForecastList = forecastFetchData.list.filter((item) =>
+              item.dt_txt.includes("12:00:00")
+            );
+            const today = new Date().toLocaleDateString("en-GB");
+
+            if (
+              dailyForecastList[0]?.dt_txt.includes(
+                today.split("/").reverse().join("-")
+              )
+            ) {
+              setDailyForcast(dailyForecastList.slice(1));
+            } else {
+              setDailyForcast(dailyForecastList);
+            }
 
             setWeatherData(data);
           } catch (error) {

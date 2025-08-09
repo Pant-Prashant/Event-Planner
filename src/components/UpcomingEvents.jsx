@@ -23,6 +23,8 @@ const UpcomingEvents = () => {
               date={items.date}
               name={items.name}
               priority={items.priority}
+              id={items.id}
+              key={items.id}
             />
           ))
         )}

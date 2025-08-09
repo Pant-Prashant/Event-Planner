@@ -3,6 +3,7 @@ import MyCalendar from "./components/MYCalendar";
 import Weather from "./components/Weather";
 import ShowEvents from "./components/ShowEvents";
 import UpcomingEvents from "./components/UpcomingEvents";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }
