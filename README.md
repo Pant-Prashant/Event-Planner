@@ -13,7 +13,7 @@ A React-based personal planner that combines a **calendar**, **event manager**, 
 ## 📸 Screenshot
 
 ### 🏠 Home Page
-![Full Page](screenshot/full-page.png)
+![Full Page](./screenshot/full-page.png)
 
 
 ---
