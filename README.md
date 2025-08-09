@@ -1,4 +1,4 @@
-<img width="1906" height="928" alt="image" src="https://github.com/user-attachments/assets/36dc9161-7fda-41db-8f5a-8e6080d4bcee" /># 📅 Smart Daily Planner
+# 📅 Smart Daily Planner
 
 A React-based personal planner that combines a **calendar**, **event manager**, and **real-time weather updates** into one beautifully designed dashboard. Plan your days, manage your events, and stay updated with the weather — all in one place!
 
