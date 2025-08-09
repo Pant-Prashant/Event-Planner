@@ -1,4 +1,4 @@
-# 📅 Smart Daily Planner
+<img width="1906" height="928" alt="image" src="https://github.com/user-attachments/assets/36dc9161-7fda-41db-8f5a-8e6080d4bcee" /># 📅 Smart Daily Planner
 
 A React-based personal planner that combines a **calendar**, **event manager**, and **real-time weather updates** into one beautifully designed dashboard. Plan your days, manage your events, and stay updated with the weather — all in one place!
 
@@ -6,13 +6,15 @@ A React-based personal planner that combines a **calendar**, **event manager**, 
 
 ## 🖼️ Demo
 
-> 📌 **Live Preview**: _Coming Soon_
+> 📌 https://eventplanner-prashant.netlify.app/)
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshot
 
-Coming soon...
+### 🏠 Home Page
+![Full Page](screenshot/full-page.png)
+
 
 ---
 
@@ -24,18 +26,18 @@ Coming soon...
 - Click any date to add or view events
 
 ### 📌 Event Planner
-- Add, edit, and delete events
+- Add, view, and delete events
 - Supports multiple events per day
 - Events saved in localStorage
 
 ### 🌤️ Weather Integration
-- Shows current and 5-day forecast
-- Auto location via browser or manual city input
+- Shows current and 4-day forecast
+- Auto location via browser 
 - Data from OpenWeatherMap API
 
 ### 🎨 UI & UX
 - Clean responsive layout
-- Theme-ready (light/dark mode optional)
+- Compatible for mobile view
 - Built with Tailwind CSS / Bootstrap
 
 ---
@@ -48,7 +50,7 @@ Coming soon...
 | Styling         | Tailwind CSS or Bootstrap     |
 | Calendar        | `react-calendar`              |
 | State Handling  | React Hooks, useContext       |
-| API Integration | Axios + OpenWeatherMap API    |
+| API Integration | OpenWeatherMap API            |
 | Storage         | localStorage (for now)        |
 | Icons           | ReactIcons                    |
 
